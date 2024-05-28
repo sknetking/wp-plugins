@@ -1,0 +1,29 @@
+.apf-pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.apf-pagination ul {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.apf-pagination ul li {
+    display: inline;
+    margin: 0 2px;
+}
+
+.apf-pagination ul li a,
+.apf-pagination ul li span {
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    color: #0073aa;
+}
+
+.apf-pagination ul li a:hover,
+.apf-pagination ul li span.current {
+    background-color: #0073aa;
+    color: #fff;
+}
