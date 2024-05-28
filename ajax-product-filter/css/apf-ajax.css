@@ -27,3 +27,9 @@
     background-color: #0073aa;
     color: #fff;
 }
+.woocommerce-page select {
+    padding: 10px;
+    appearance: none;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
