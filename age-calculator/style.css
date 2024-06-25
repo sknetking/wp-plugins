@@ -1,0 +1,27 @@
+.flatpickr-calendar {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Add more specific styles as needed */
+}
+
+/* Override conflicting styles if necessary */
+.flatpickr-input {
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 4px;
+    /* Add other necessary styles */
+}
+.add-age-section
+{
+    font-family: Arial, sans-serif;
+    height:auto;
+    background-color: #f0f0f0;
+    border:solid 1px black;
+    padding: 10px;
+}
+
+.result {
+    font-size: 20px;
+     text-align: center;
+}
