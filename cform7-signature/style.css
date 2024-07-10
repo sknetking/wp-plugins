@@ -1,0 +1,35 @@
+#canvas-container {
+    width: 100%;
+    height: 300px; /* Adjust this value as needed */
+    border: 1px solid black;
+    position: relative;
+}
+#canvas {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    background-color:#fff;
+}
+.buttons, .settings {
+    margin-top: 10px;
+}
+.buttons button{
+padding:5px 10px;
+font-size:16px;
+color: #000;
+border: solid 2px #000;
+}
+
+.settings {
+display: inline-flex;
+}
+.settings label {
+width: fit-content;
+margin-right: 11px;
+margin-left: 10px;
+}
+.settings input {
+width: 100px;
+border: none;
+color: #000;
+}
