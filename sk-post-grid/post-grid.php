@@ -2,16 +2,16 @@
 
 /**
  * Plugin Name:       SK Post Grid
- * Plugin URI:        https://post-grid.com
- * Description:       Post Grid is a clean way to generate Post Grid data to your WordPress installation, great for developers who need testing
+ * Plugin URI:         https://www.sknetking.online
+ * Description:       Post Grid is a clean way to generate Post Grid data to your WordPress, And show post in grid with category 
  * Version:           0.6.6
  * Author:            Sk netking
- * Author URI:        https://shyam.me
+ * Author URI:        https://www.sknetking.online
  * Text Domain:       sk-post-grid
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Domain Path:       /languages
- * GitHub Plugin URI: https://github.com/bordoni/Post Grid
+ * GitHub Plugin URI: https://github.com/sknetking/wp-plugins/edit/main/sk-post-grid/post-grid.php
  */
 
 function enqueue_custom_scripts() {
