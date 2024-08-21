@@ -37,16 +37,17 @@ function output_post_seo_meta_data() {
         $meta_viewport = get_post_meta( get_the_ID(), 'meta_viewport', true );
        ?>
        
-       <?php if($og_url!=''): ?><meta property="og:url" content="<?php echo esc_attr( $og_url ); ?>"> <?php endif;?>
-       <?php if($og_type!=''): ?>  <meta property="og:type" content="<?php echo esc_attr( $og_type ); ?>">           <?php endif;?>
-        <?php if($og_title!=''): ?> <meta property="og:title" content="<?php echo esc_attr( $og_title ); ?>">         <?php endif;?>
+       <?php if($og_url!=''): ?> <meta property="og:url" content="<?php echo esc_attr( $og_url ); ?>"/> <?php endif; ?>
+       <?php if($og_type!=''): ?>  <meta property="og:type" content="<?php echo esc_attr( $og_type ); ?>"/> <?php endif;?>
+        <?php if($og_title!=''): ?> <meta property="og:title" content="<?php echo esc_attr( $og_title ); ?>"/>  <?php endif;?>
        <?php if($og_description!=''): ?>  <meta property="og:description" content="<?php echo esc_attr( $og_description ); ?>"><?php endif;?>
-       <?php if($og_image!=''): ?>  <meta property="og:image" content="<?php echo esc_attr( $og_image ); ?>">           <?php endif;?>
-       <?php if($meta_description!=''): ?>  <meta name="description" content="<?php echo esc_attr( $meta_description ); ?>">       <?php endif;?>
-       <?php if($meta_keywords!=''): ?>  <meta name="keywords" content="<?php echo esc_attr( $meta_keywords ); ?>">            <?php endif;?>
-       <?php if($meta_author!=''): ?>  <meta name="author" content="<?php echo esc_attr( $meta_author ); ?>">            <?php endif;?>
-       <?php if($meta_language!=''): ?>  <meta name="language" content="<?php echo esc_attr( $meta_language ); ?>">            <?php endif;?>
-       <?php if($meta_viewport!=''): ?>  <meta name="viewport" content="<?php echo esc_attr( $meta_viewport ); ?>">            <?php endif;?>
+       <?php if($og_image!=''): ?>  <meta property="og:image" content="<?php echo esc_attr( $og_image ); ?>"/>  <?php endif;?>
+       <?php if($meta_description!=''): ?>  <meta name="description" content="<?php echo esc_attr( $meta_description ); ?>"/> <?php endif;?>
+       <?php if($meta_keywords!=''): ?>  <meta name="keywords" content="<?php echo esc_attr( $meta_keywords ); ?>"/> <?php endif;?>
+       <?php if($meta_author!=''): ?>  <meta name="author" content="<?php echo esc_attr( $meta_author ); ?>"/> <?php endif;?>
+       <?php if($meta_language!=''): ?>  <meta name="language" content="<?php echo esc_attr( $meta_language ); ?>"/>  <?php endif;?>
+       <?php if($meta_viewport!=''): ?>  <meta name="viewport" content="<?php echo esc_attr( $meta_viewport ); ?>"/>  <?php endif;?>
+       <?php if(!empty(get_the_post_thumbnail_url())):?> <meta property="og:image" content="<?php echo esc_attr(get_the_post_thumbnail_url()); ?>"/> <meta property="twitter:image" content="<?php echo esc_attr(get_the_post_thumbnail_url()); ?>"/>  <?php endif;?>
         <?php
     }
 }
@@ -79,19 +80,19 @@ function display_post_seo_meta_box( $post ) {
     $meta_viewport = get_post_meta( $post->ID, 'meta_viewport', true );
     ?>
     <label class="form-label" for="og_url" >Your Post URL:</label><br>
-    <input type="text" id="og_url" name="og_url" class="form-control" value="<?php echo esc_attr( $og_url ); ?>"><br>
+    <input type="text" id="og_url" name="og_url" class="form-control" value="<?php echo !empty(esc_attr( $og_url ))?esc_attr( $og_url ):the_permalink($post->ID); ?>"><br>
     <!-- Add more input fields for other meta data -->
     <label class="form-label" for="og_type">Your Content Type(article,meadia,post):</label><br>
-    <input type="text" id="og_type" name="og_type" class="form-control" value="<?php echo esc_attr($og_type); ?>"><br>
+    <input type="text" id="og_type" name="og_type" class="form-control" value="<?php echo !empty(esc_attr($og_type))?$og_type:'post'; ?>"><br>
     <label class="form-label" for="og_title">Meta Title:</label><br>
-    <input type="text" id="og_title" name="og_title" class="form-control" value="<?php echo esc_attr($og_title); ?>"><br>
+    <input type="text" id="og_title" name="og_title" class="form-control" value="<?php echo !empty(esc_attr($og_title))?$og_title:the_title(); ?>"><br>
     <label class="form-label" for="og_description">Meta Description:</label><br>
-    <textarea type="text" rows="4" cols="50" id="og_description" class="form-control" name="og_description"> <?php echo esc_attr($og_description); ?> </textarea ><br>
+    <textarea type="text" rows="4" cols="50" id="og_description" class="form-control" name="og_description"> <?php echo !empty(esc_attr($og_description))?esc_html($og_description):the_excerpt(); ?> </textarea ><br>
     <label class="form-label" for="meta_keywords">Meta Kaywords With (,) Sepreated:</label><br>
     <textarea type="text" rows="4" cols="50" id="meta_keywords" class="form-control" name="meta_keywords"> <?php echo esc_attr($meta_keywords); ?> </textarea ><br>
 
     <label class="form-label" for="meta_author">Meta Author:</label><br>
-    <input type="text" id="meta_author" name="meta_author" class="form-control" value="<?php echo esc_attr($meta_author); ?>"><br>
+    <input type="text" id="meta_author" name="meta_author" class="form-control" value="<?php echo esc_attr($meta_author)?esc_attr($meta_author):get_the_author_meta('display_name'); ?>"><br>
     <label class="form-label" for="meta_language">Meta Language:</label><br>
     <input type="text" id="meta_language" name="meta_language" class="form-control" value="<?php echo esc_attr($meta_language); ?>"><br>
 
