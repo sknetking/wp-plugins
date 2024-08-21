@@ -29,7 +29,6 @@ function output_post_seo_meta_data() {
         $og_type = get_post_meta( get_the_ID(), 'og_type', true );
         $og_title = get_post_meta( get_the_ID(), 'og_title', true );
         $og_description = get_post_meta( get_the_ID(), 'og_description', true );
-        $og_image = get_post_meta( get_the_ID(), 'og_image', true );
         $meta_description = get_post_meta( get_the_ID(), 'meta_description', true );
         $meta_keywords = get_post_meta( get_the_ID(), 'meta_keywords', true );
         $meta_author = get_post_meta( get_the_ID(), 'meta_author', true );
@@ -41,7 +40,6 @@ function output_post_seo_meta_data() {
        <?php if($og_type!=''): ?>  <meta property="og:type" content="<?php echo esc_attr( $og_type ); ?>"/> <?php endif;?>
         <?php if($og_title!=''): ?> <meta property="og:title" content="<?php echo esc_attr( $og_title ); ?>"/>  <?php endif;?>
        <?php if($og_description!=''): ?>  <meta property="og:description" content="<?php echo esc_attr( $og_description ); ?>"><?php endif;?>
-       <?php if($og_image!=''): ?>  <meta property="og:image" content="<?php echo esc_attr( $og_image ); ?>"/>  <?php endif;?>
        <?php if($meta_description!=''): ?>  <meta name="description" content="<?php echo esc_attr( $meta_description ); ?>"/> <?php endif;?>
        <?php if($meta_keywords!=''): ?>  <meta name="keywords" content="<?php echo esc_attr( $meta_keywords ); ?>"/> <?php endif;?>
        <?php if($meta_author!=''): ?>  <meta name="author" content="<?php echo esc_attr( $meta_author ); ?>"/> <?php endif;?>
@@ -72,7 +70,6 @@ function display_post_seo_meta_box( $post ) {
     $og_type = get_post_meta( $post->ID, 'og_type', true );
     $og_title = get_post_meta( $post->ID, 'og_title', true );
     $og_description = get_post_meta( $post->ID, 'og_description', true );
-    $og_image = get_post_meta( $post->ID, 'og_image', true );
     $meta_description = get_post_meta( $post->ID, 'meta_description', true );
     $meta_keywords = get_post_meta( $post->ID, 'meta_keywords', true );
     $meta_author = get_post_meta( $post->ID, 'meta_author', true );
