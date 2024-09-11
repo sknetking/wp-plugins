@@ -1,9 +1,14 @@
 <?php
 /*
 Plugin Name: User Profile Picture
-Description: Allows users to select a profile picture from the WordPress media library.
+Plugin URI: https://example.com/user-profile-picture
+Description: Allows users to select a profile picture from the WordPress media library and use it as their profile avatar.
 Version: 1.0
 Author: Shyam Sahani
+Author URI: https://sknetking9.blogspot.com
+License: GPLv2 or later
+Text Domain: sk-user-profile-picture
+Domain Path: /languages
 */
 
 if (!defined('ABSPATH')) {
