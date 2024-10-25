@@ -1,0 +1,15 @@
+select#store-selector {
+    position: absolute;
+    top: 100px;
+    z-index: 9999;
+    right: 36px;
+    width: 200px;
+}
+#nearest_store {
+    position: absolute;
+    top: 104px;
+    z-index: 9999;
+    right: 242px;
+    width: fit-content;
+    cursor: pointer;
+}
