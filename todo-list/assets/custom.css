@@ -1,0 +1,70 @@
+.add-task {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.todo-wrapper {
+    padding: 20px;
+    background: #f7f7f7;
+}
+.todo-wrapper ul {
+    list-style: none;
+    padding: 0;
+}
+.todo-text{
+     color: rgb(255, 3, 213);
+}
+.todo-wrapper li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.todo-wrapper li.done .todo-text {
+    text-decoration: line-through;
+    color: rgb(255, 3, 213);
+}
+.todo-wrapper button {
+    margin-left: 10px;
+}
+
+ul#todo-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#todo-list li
+.todo-text{
+     width:78%;
+     line-break:anywhere;
+}
+.checkbox{
+    margin:10px;
+}
+
+.actions {
+    display: flex;
+    width: 20%;
+    max-height: 50px;
+}
+button.mark-done {
+    background: #e734a9;
+    color: #fff;
+}
+button.delete-todo {
+    background: red;
+    color: #fff;
+}
+
+textarea#new-todo {
+    width: 85%;
+}
+
+button#add-todo {
+    width: 10% !important;
+    background: #e734a9;
+    color:#fff;
+}
+
+
+.todo-content {
+    width: 100%;
+}
