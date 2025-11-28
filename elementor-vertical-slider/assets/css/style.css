@@ -1,0 +1,18 @@
+.evs-prev, .evs-next {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  z-index: 9999;
+  width: 35px;
+  height: 35px;
+}
+
+/* place prev at top and next at bottom centered */
+.evs-prev { top: 6px; }
+.evs-next { bottom: 6px; }
+
+/* small style for slides */
+.evs-slider .evs-slide { padding: 20px; box-sizing: border-box; }
